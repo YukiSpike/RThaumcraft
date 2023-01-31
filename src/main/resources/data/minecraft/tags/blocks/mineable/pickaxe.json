@@ -1,0 +1,20 @@
+{
+	"replace": false,
+	"values": [
+		"rthaumcraft:shard_air_ore",
+		"rthaumcraft:shard_fire_ore",
+		"rthaumcraft:shard_water_ore",
+		"rthaumcraft:shard_earth_ore",
+		"rthaumcraft:shard_order_ore",
+		"rthaumcraft:shard_entropy_ore",
+		"rthaumcraft:amber_ore",
+		"rthaumcraft:deepslate_amber_ore",
+		"rthaumcraft:cinnibar_ore",
+		"rthaumcraft:deepslate_cinnibar_ore",
+		"rthaumcraft:amber_block",
+		"rthaumcraft:amber_brick",
+		"rthaumcraft:thaumium_block",
+		"rthaumcraft:void_block",
+		"rthaumcraft:crucible"
+	]
+}

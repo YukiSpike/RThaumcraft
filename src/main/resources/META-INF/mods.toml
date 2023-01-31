@@ -1,0 +1,30 @@
+
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+
+[[mods]]
+modId="rthaumcraft"
+version="${file.jarVersion}"
+displayName="R-Thaumcraft"
+logoFile="rthaumcraft.png"
+credits="Yuki_Spike"
+authors="Yuki_Spike"
+description='''
+只是一个尝试...
+'''
+
+
+[[dependencies.examplemod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"

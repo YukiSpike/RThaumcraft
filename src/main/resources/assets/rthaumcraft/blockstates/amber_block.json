@@ -1,0 +1,6 @@
+{
+    "variants":{
+        "lit=true":{"model": "rthaumcraft:block/amber_block"},
+        "lit=false":{"model": "rthaumcraft:block/amber_block"}
+    }
+}
