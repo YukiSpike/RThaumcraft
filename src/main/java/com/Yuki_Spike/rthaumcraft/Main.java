@@ -1,7 +1,6 @@
 package com.Yuki_Spike.rthaumcraft;
 
-import org.slf4j.Logger;
-
+import com.Yuki_Spike.rthaumcraft.curios.CuriosSlotTypeHandler;
 import com.Yuki_Spike.rthaumcraft.items.bonebow;
 import com.Yuki_Spike.rthaumcraft.list.BlockList;
 import com.Yuki_Spike.rthaumcraft.list.EntityList;
@@ -9,7 +8,6 @@ import com.Yuki_Spike.rthaumcraft.list.ItemList;
 import com.Yuki_Spike.rthaumcraft.world.feature.ModConfiguredFeatures;
 import com.Yuki_Spike.rthaumcraft.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
-
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,7 +17,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
+import top.theillusivec4.curios.api.SlotTypeMessage;
 
 @Mod(Main.MOD_ID)
 public class Main {
@@ -38,6 +38,7 @@ public class Main {
         bus.addListener(this::commonSetup);
         bus.addListener(this::setup); 
         bus.addListener(this::clientSetup);
+        bus.addListener(CuriosSlotTypeHandler::onInterModEnqueueEvent);
         ItemList.ITEMS.register(bus);
         BlockList.BLOCKS.register(bus);
         EntityList.ENTITY_TYPES.register(bus);

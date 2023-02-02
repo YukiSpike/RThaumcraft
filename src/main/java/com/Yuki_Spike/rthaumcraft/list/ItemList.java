@@ -1,18 +1,7 @@
 package com.Yuki_Spike.rthaumcraft.list;
 
 import com.Yuki_Spike.rthaumcraft.Main;
-import com.Yuki_Spike.rthaumcraft.items.CustomArmorMaterial;
-import com.Yuki_Spike.rthaumcraft.items.bonebow;
-import com.Yuki_Spike.rthaumcraft.items.thaumiumaxe;
-import com.Yuki_Spike.rthaumcraft.items.thaumiumhoe;
-import com.Yuki_Spike.rthaumcraft.items.thaumiumpickaxe;
-import com.Yuki_Spike.rthaumcraft.items.thaumiumshovel;
-import com.Yuki_Spike.rthaumcraft.items.thaumiumsword;
-import com.Yuki_Spike.rthaumcraft.items.voidaxe;
-import com.Yuki_Spike.rthaumcraft.items.voidhoe;
-import com.Yuki_Spike.rthaumcraft.items.voidpickaxe;
-import com.Yuki_Spike.rthaumcraft.items.voidshovel;
-import com.Yuki_Spike.rthaumcraft.items.voidsword;
+import com.Yuki_Spike.rthaumcraft.items.*;
 import com.google.common.base.Supplier;
 
 import net.minecraft.world.entity.EquipmentSlot;
@@ -84,6 +73,9 @@ public class ItemList {
 
         public static final RegistryObject<Item> THAUMONOMICON = register("thaumonomicon",
         () -> new Item(new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Item> RING = register("ring",
+                () -> {return new ItemRing();});
 
         public static RegistryObject<Item> THAUMIUM_SWORD = register("thaumium_sword",
         () -> {return new thaumiumsword();});
