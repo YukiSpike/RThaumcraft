@@ -4,6 +4,7 @@ import com.Yuki_Spike.rthaumcraft.curios.CuriosSlotTypeHandler;
 import com.Yuki_Spike.rthaumcraft.items.bonebow;
 import com.Yuki_Spike.rthaumcraft.list.BlockList;
 import com.Yuki_Spike.rthaumcraft.list.EntityList;
+import com.Yuki_Spike.rthaumcraft.list.FoodList;
 import com.Yuki_Spike.rthaumcraft.list.ItemList;
 import com.Yuki_Spike.rthaumcraft.world.feature.ModConfiguredFeatures;
 import com.Yuki_Spike.rthaumcraft.world.feature.ModPlacedFeatures;
@@ -16,10 +17,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
-import top.theillusivec4.curios.api.SlotTypeMessage;
+//import top.theillusivec4.curios.api.SlotTypeMessage;
 
 @Mod(Main.MOD_ID)
 public class Main {
@@ -40,6 +42,7 @@ public class Main {
         bus.addListener(this::clientSetup);
         bus.addListener(CuriosSlotTypeHandler::onInterModEnqueueEvent);
         ItemList.ITEMS.register(bus);
+        FoodList.ITEMS.register(bus);
         BlockList.BLOCKS.register(bus);
         EntityList.ENTITY_TYPES.register(bus);
         ModConfiguredFeatures.register(bus);
@@ -58,6 +61,14 @@ public class Main {
 
     private void clientSetup(final FMLClientSetupEvent event) {
         bonebow.addCustomItemProperties();
+    }
+
+    public void enqueueIMC(final InterModEnqueueEvent event) {
+    //    SlotTypePreset[] types = {SlotTypePreset.HEAD, SlotTypePreset.NECKLACE, SlotTypePreset.BELT};
+    //    for (SlotTypePreset type : types) {
+    //        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> type.getMessageBuilder().build());
+    //   }
+    //    InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HANDS.getMessageBuilder().size(2).build());
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
