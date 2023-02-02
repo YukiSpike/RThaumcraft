@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "":{
+            "model": "rthaumcraft:block/magic_tallow_block"
+        }
+    }
+}
