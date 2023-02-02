@@ -31,9 +31,51 @@ public class BlockList {
                         Main.MOD_ID);
         public static final DeferredRegister<Item> ITEMS = ItemList.ITEMS;
 
+
         public static final RegistryObject<Block> WOOD_GREAT = register("wood_great",
                 () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
                         .strength(2.0F, 2.0F).sound(SoundType.WOOD)),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> WOOD_SILVER = register("wood_silver",
+                () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                        .strength(2.0F, 2.0F).sound(SoundType.WOOD)),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> WOOD_SILVER_KNOT = register("wood_silver_knot",
+                () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                        .strength(2.0F, 2.0F).sound(SoundType.WOOD)),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> WOOD_GREAT_PLANKS = register("wood_great_planks",
+                () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                        .strength(2.0F, 2.0F).sound(SoundType.WOOD)),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> WOOD_SILVER_PLANKS = register("wood_silver_planks",
+                () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                        .strength(2.0F, 2.0F).sound(SoundType.WOOD)),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> MAGIC_TALLOW_BLOCK = register("magic_tallow_block",
+                () -> new Block(BlockBehaviour.Properties.of(Material.SNOW)
+                        .strength(2.0F, 2.0F).sound(SoundType.SNOW)),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> WOOD_SILVER_LEAVES = register("wood_silver_leaves",
+                () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES)
+                        .strength(0.0F, 0.0F).sound(SoundType.AZALEA_LEAVES).noOcclusion()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> WOOD_GREAT_LEAVES = register("wood_great_leaves",
+                () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES)
+                        .strength(0.0F, 0.0F).sound(SoundType.AZALEA_LEAVES).noOcclusion()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> ARCANE_LAMP = register("arcane_lamp",
+                () -> new CustomLamp(BlockBehaviour.Properties.of(Material.METAL)
+                        .strength(2.0F, 2.0F).noOcclusion()
+                        .sound(SoundType.METAL).lightLevel(state -> state.getValue(CustomLamp.LIT) ? 15 : 0)),
                 object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
         public static final RegistryObject<Block> TABLE = register("table",
@@ -65,9 +107,8 @@ public class BlockList {
                         object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
         public static final RegistryObject<Block> AMBER_BLOCK = register("amber_block",
-                () -> new CustomLamp(BlockBehaviour.Properties.of(Material.STONE)
-                                        .strength(3.0F, 3.0F)
-                                        .sound(SoundType.STONE).lightLevel(state -> state.getValue(CustomLamp.LIT) ? 15 : 0)
+                () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                                        .strength(3.0F, 3.0F).sound(SoundType.STONE)
                                         .requiresCorrectToolForDrops()),
                         object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
@@ -128,6 +169,8 @@ public class BlockList {
                                         .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
                                         .sound(SoundType.STONE), UniformInt.of(3, 10)), Main.MAIN_TAB);
         
+
+
         private static <T extends Block> RegistryObject<T> registerBlock(final String name,
                         final Supplier<? extends T> block) {
                                 return BLOCKS.register(name, block);

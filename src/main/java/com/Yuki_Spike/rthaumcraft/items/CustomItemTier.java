@@ -14,8 +14,10 @@ public enum CustomItemTier implements Tier{
 	    }),
 	    voiditems(4, 500, 9.0F, 4.0F, 15,() -> {
 	        return Ingredient.of(ItemList.VOID_INGOT.get());
+	    }),
+		elementalitems(4, 1000, 9.0F, 4.0F, 20,() -> {
+	        return Ingredient.of(ItemList.THAUMIUM_INGOT.get());
 	    });
-
 
 	   private final int level;
 	   private final int uses;

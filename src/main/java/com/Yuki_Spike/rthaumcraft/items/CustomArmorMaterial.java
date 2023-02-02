@@ -15,14 +15,22 @@ import net.minecraft.world.item.crafting.Ingredient;
 public enum CustomArmorMaterial implements ArmorMaterial{
 
 	//int[]{鞋子,护腿,胸甲,头盔},附魔能力,抗性,击退抗性
-	THAUMIUMARMOR("thaumiumarmor", 80, new int[]{2, 5, 6, 2}, 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> {
+	THAUMIUMARMOR("thaumiumarmor", 25, new int[]{2, 5, 6, 2}, 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> {
 	      return Ingredient.of(ItemList.THAUMIUM_INGOT.get());
 	    }),
-    VOIDARMOR("voidarmor", 80, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_IRON, 3F, 0.1F, () -> {
+    VOIDARMOR("voidarmor", 10, new int[]{3, 6, 7, 3}, 15, SoundEvents.ARMOR_EQUIP_IRON, 3F, 0.1F, () -> {
 		      return Ingredient.of(ItemList.VOID_INGOT.get());	   
         }),
-    THAUMIUMFORTRESS("thaumiumfortress", 80, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_IRON, 3.0F, 0.2F, () -> {
+    THAUMIUMFORTRESS("thaumiumfortress", 40, new int[]{3, 6, 7, 3}, 20, SoundEvents.ARMOR_EQUIP_IRON, 3.0F, 0.2F, () -> {
             return Ingredient.of(ItemList.THAUMIUM_INGOT.get());
+        }),
+
+    CLOTHARMOR("clotharmor", 25, new int[]{1, 2, 3, 1}, 20, SoundEvents.ARMOR_EQUIP_LEATHER, 3.0F, 0F, () -> {
+            return Ingredient.of(ItemList.ENCHANTED_FABRIC.get());
+        }),
+
+    MAGICARMOR("magicarmor", 25, new int[]{1, 2, 3, 1}, 20, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0F, () -> {
+            return Ingredient.of(ItemList.SALIS_MUNDUS.get());
         });
 
     private static final int[] baseDurability = { 13, 15, 16, 11 };
