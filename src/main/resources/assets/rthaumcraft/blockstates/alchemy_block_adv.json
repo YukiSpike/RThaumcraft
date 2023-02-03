@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "":{
+            "model": "rthaumcraft:block/alchemy_block_adv"
+        }
+    }
+}
