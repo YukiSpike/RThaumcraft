@@ -2,6 +2,8 @@ package com.Yuki_Spike.rthaumcraft.list;
 
 import com.Yuki_Spike.rthaumcraft.Main;
 import com.Yuki_Spike.rthaumcraft.items.CustomArmorMaterial;
+import com.Yuki_Spike.rthaumcraft.items.ItemAmulet;
+import com.Yuki_Spike.rthaumcraft.items.ItemBelt;
 import com.Yuki_Spike.rthaumcraft.items.ItemRing;
 import com.Yuki_Spike.rthaumcraft.items.bonebow;
 import com.Yuki_Spike.rthaumcraft.items.crimsonsword;
@@ -24,7 +26,9 @@ import com.google.common.base.Supplier;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -288,9 +292,18 @@ public class ItemList {
 
         public static final RegistryObject<Item> STAFF_ROD_PRIMAL = register("staff_rod_primal",
             () -> new Item(new Item.Properties().tab(Main.MAIN_TAB)));
+            
+        public static final RegistryObject<Item> DEATH_WATER_BUCKET = register("death_water_bucket",
+            () -> new BucketItem(FluidList.SOURCE_DEATH_WATER, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET).tab(Main.MAIN_TAB)));
 
-        public static final RegistryObject<Item> RING = register("ring",
+        public static final RegistryObject<Item> BAUBLE_RING = register("bauble_ring",
             () -> {return new ItemRing();});
+
+        public static final RegistryObject<Item> BAUBLE_AMULET = register("bauble_amulet",
+            () -> {return new ItemAmulet();});
+
+        public static final RegistryObject<Item> BAUBLE_BELT = register("bauble_belt",
+            () -> {return new ItemBelt();});
 
 
 

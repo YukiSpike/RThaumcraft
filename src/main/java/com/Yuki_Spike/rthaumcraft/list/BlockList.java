@@ -2,7 +2,10 @@ package com.Yuki_Spike.rthaumcraft.list;
 
 import com.Yuki_Spike.rthaumcraft.Main;
 import com.Yuki_Spike.rthaumcraft.blocks.CustomCrucible;
-import com.Yuki_Spike.rthaumcraft.items.CustomLamp;
+import com.Yuki_Spike.rthaumcraft.blocks.CustomJar;
+import com.Yuki_Spike.rthaumcraft.blocks.CustomLamp;
+import com.Yuki_Spike.rthaumcraft.blocks.CustomPedestal;
+import com.Yuki_Spike.rthaumcraft.blocks.CustomTable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -13,7 +16,11 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StainedGlassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -57,6 +64,38 @@ public class BlockList {
                         .strength(2.0F, 2.0F).sound(SoundType.WOOD)),
                 object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
+        public static final RegistryObject<Block> ARCANE_PLATE = register("arcane_plate",
+                () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
+                        .strength(2.0F, 2.0F).sound(SoundType.WOOD).noOcclusion()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> ARCANE_DOOR = register("arcane_door",
+                () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                        .strength(2.0F, 2.0F).sound(SoundType.WOOD).noOcclusion()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> ARCANE_BRICK = register("arcane_brick",
+                () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2.0F, 2.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> ARCANE_STONE = register("arcane_stone",
+                () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2.0F, 2.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+                
+        public static final RegistryObject<Block> ALCHEMY_BLOCK = register("alchemy_block",
+        () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                .strength(2.0F, 2.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()),
+        object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+        
+        public static final RegistryObject<Block> ALCHEMY_BLOCK_ADV = register("alchemy_block_adv",
+                () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                        .strength(2.0F, 2.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+
+
         public static final RegistryObject<Block> MAGIC_TALLOW_BLOCK = register("magic_tallow_block",
                 () -> new Block(BlockBehaviour.Properties.of(Material.SNOW)
                         .strength(2.0F, 2.0F).sound(SoundType.SNOW)),
@@ -79,15 +118,20 @@ public class BlockList {
                 object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
         public static final RegistryObject<Block> TABLE = register("table",
-                () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                () -> new CustomTable(BlockBehaviour.Properties.of(Material.WOOD)
                         .strength(2.0F, 2.0F).sound(SoundType.WOOD).noOcclusion()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+
+        public static final RegistryObject<Block> ARCANE_PEDESTAL = register("arcane_pedestal",
+                () -> new CustomPedestal(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2.0F, 2.0F).sound(SoundType.STONE).noOcclusion()),
                 object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
         public static final RegistryObject<Block> CRUCIBLE = register("crucible",
                 () -> new CustomCrucible(BlockBehaviour.Properties.of(Material.METAL)
-                                        .strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()
-                                        .requiresCorrectToolForDrops()),
-                        object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
+                        .strength(2.0F, 3.0F).sound(SoundType.METAL).noOcclusion()
+                        .requiresCorrectToolForDrops()),
+                object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.MAIN_TAB)));
 
         public static final RegistryObject<Block> THAUMIUM_BLOCK = register("thaumium_block",
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
@@ -168,7 +212,19 @@ public class BlockList {
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                                         .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
                                         .sound(SoundType.STONE), UniformInt.of(3, 10)), Main.MAIN_TAB);
+
+        public static final RegistryObject<Block> JAR = registerBlock("jar",
+                () -> new CustomJar(BlockBehaviour.Properties.of(Material.GLASS).noOcclusion()
+                                        .strength(1.0F, 1.0F).sound(SoundType.GLASS)), Main.MAIN_TAB);
         
+        public static final RegistryObject<Block> JAR_void = registerBlock("jar_void",
+                () -> new CustomJar(BlockBehaviour.Properties.of(Material.GLASS).noOcclusion()
+                                        .strength(1.0F, 1.0F).sound(SoundType.GLASS)), Main.MAIN_TAB);
+        
+        public static final RegistryObject<LiquidBlock> DEATH_WATER_BLOCK = BLOCKS.register("death_water_block",
+                () -> new LiquidBlock(FluidList.SOURCE_DEATH_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noOcclusion()));
+                                
+
 
 
         private static <T extends Block> RegistryObject<T> registerBlock(final String name,
