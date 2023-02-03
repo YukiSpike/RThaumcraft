@@ -1,0 +1,63 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "rthaumcraft:block/jar_void_top",
+		"1": "rthaumcraft:block/jar_void_side",
+		"2": "rthaumcraft:block/jar_bottom",
+		"particle": "rthaumcraft:block/jar_void_top"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 3],
+			"to": [13, 12, 13],
+			"faces": {
+				"north": {"uv": [3, 4, 13, 16], "texture": "#1"},
+				"east": {"uv": [3, 4, 13, 16], "texture": "#1"},
+				"south": {"uv": [3, 4, 13, 16], "texture": "#1"},
+				"west": {"uv": [3, 4, 13, 16], "texture": "#1"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#2"}
+			}
+		},
+		{
+			"from": [5, 12, 5],
+			"to": [11, 14, 11],
+			"faces": {
+				"north": {"uv": [5, 2, 11, 4], "texture": "#1"},
+				"east": {"uv": [5, 2, 11, 4], "texture": "#1"},
+				"south": {"uv": [5, 2, 11, 4], "texture": "#1"},
+				"west": {"uv": [5, 2, 11, 4], "texture": "#1"},
+				"up": {"uv": [5, 5, 11, 11], "texture": "#0"},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0, -2],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 0, -2],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"gui": {
+			"rotation": [30, 45, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"head": {
+			"translation": [0, 14.5, 0]
+		}
+	},
+	"render_type": "translucent"
+}
