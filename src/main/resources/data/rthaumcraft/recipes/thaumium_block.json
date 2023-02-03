@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "rthaumcraft:thaumium_ingot"
+        }
+    },
+    "result": {
+        "item": "rthaumcraft:thaumium_block"
+    }
+}

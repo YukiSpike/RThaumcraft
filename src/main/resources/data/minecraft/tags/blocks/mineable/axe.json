@@ -1,6 +1,11 @@
 {
 	"replace": false,
 	"values": [
-        "rthaumcraft:wood_great"
+        "rthaumcraft:wood_great",
+        "rthaumcraft:wood_silver",
+        "rthaumcraft:wood_silver_knot",
+        "rthaumcraft:wood_great_planks",
+        "rthaumcraft:wood_silver_planks",
+        "rthaumcraft:table"
     ]
 }

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smelting",
+    "cookingtime": 200,
+    "experience": 1,
+    "group": "cinnabar",
+    "ingredient": {
+        "item": "rthaumcraft:cinnabar_cluster"
+    },
+    "result": {
+        "item": "rthaumcraft:quicksilver"
+    }
+}

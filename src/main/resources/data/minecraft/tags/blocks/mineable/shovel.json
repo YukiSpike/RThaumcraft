@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-        "rthaumcraft:salis_mundus_block"
+        "rthaumcraft:salis_mundus_block",
+        "rthaumcraft:magic_tallow_block"
     ]
 }

@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 0.5,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "rthaumcraft:arcane_door"
+				}
+			]
+		}
+	]
+}

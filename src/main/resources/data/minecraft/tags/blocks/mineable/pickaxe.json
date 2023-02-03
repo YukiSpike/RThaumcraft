@@ -15,6 +15,14 @@
 		"rthaumcraft:amber_brick",
 		"rthaumcraft:thaumium_block",
 		"rthaumcraft:void_block",
-		"rthaumcraft:crucible"
+		"rthaumcraft:crucible",
+		"rthaumcraft:alchemy_block",
+		"rthaumcraft:alchemy_block_adv",
+		"rthaumcraft:arcane_plate",
+		"rthaumcraft:arcane_door",
+		"rthaumcraft:arcane_brick",
+		"rthaumcraft:arcane_stone",
+		"rthaumcraft:arcane_pedestal",
+		"rthaumcraft:arcane_lamp"
 	]
 }
