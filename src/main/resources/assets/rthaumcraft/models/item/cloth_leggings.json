@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "rthaumcraft:item/cloth_leggings",
+        "layer1": "rthaumcraft:item/cloth_leggings_overlay"
+    }
+}
