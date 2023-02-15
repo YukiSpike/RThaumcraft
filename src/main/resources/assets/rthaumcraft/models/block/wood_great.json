@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "side": "rthaumcraft:block/wood_great",
+        "end": "rthaumcraft:block/wood_great_top"
+    }
+}

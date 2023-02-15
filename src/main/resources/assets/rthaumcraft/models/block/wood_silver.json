@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "side": "rthaumcraft:block/wood_silver",
+        "end": "rthaumcraft:block/wood_silver_top"
+    }
+}

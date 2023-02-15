@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "rthaumcraft:block/wood_silver_knot",
+        "up": "rthaumcraft:block/wood_silver_knot_top",
+        "down": "rthaumcraft:block/wood_silver_knot_top"
+    }
+}
