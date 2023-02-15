@@ -1,7 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"rthaumcraft:shard_air_ore",
+		"rthaumcraft:shard_aer_ore",
 		"rthaumcraft:shard_fire_ore",
 		"rthaumcraft:shard_water_ore",
 		"rthaumcraft:shard_earth_ore",
@@ -23,6 +23,8 @@
 		"rthaumcraft:arcane_brick",
 		"rthaumcraft:arcane_stone",
 		"rthaumcraft:arcane_pedestal",
-		"rthaumcraft:arcane_lamp"
+		"rthaumcraft:arcane_lamp",
+		"rthaumcraft:obsidian_tile",
+		"rthaumcraft:obsidian_totem"
 	]
 }
