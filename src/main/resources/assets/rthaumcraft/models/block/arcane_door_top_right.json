@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_top_right",
-  "textures": {
-    "bottom": "rthaumcraft:block/arcane_door_bottom",
-    "top": "rthaumcraft:block/arcane_door_top"
-	},
-	"render_type": "translucent"
-}

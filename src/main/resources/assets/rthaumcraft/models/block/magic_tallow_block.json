@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "rthaumcraft:block/magic_tallow_block",
-        "up": "rthaumcraft:block/magic_tallow_block_top",
-        "down": "rthaumcraft:block/magic_tallow_block_top"
-    }
-}
