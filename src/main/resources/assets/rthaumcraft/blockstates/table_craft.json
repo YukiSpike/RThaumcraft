@@ -1,0 +1,7 @@
+{
+    "variants":{
+        "":{
+            "model": "rthaumcraft:block/table_craft"
+        }
+    }
+}

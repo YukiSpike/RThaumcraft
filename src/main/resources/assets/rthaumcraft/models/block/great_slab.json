@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "rthaumcraft:block/great_planks",
+    "side": "rthaumcraft:block/great_planks",
+    "top": "rthaumcraft:block/great_planks"
+  }
+}

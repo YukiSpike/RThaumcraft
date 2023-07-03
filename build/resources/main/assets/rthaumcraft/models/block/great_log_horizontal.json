@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "rthaumcraft:block/great_log_top",
+    "side": "rthaumcraft:block/great_log"
+  }
+}

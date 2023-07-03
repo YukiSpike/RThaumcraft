@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rthaumcraft:block/great_slab"
+    },
+    "type=double": {
+      "model": "rthaumcraft:block/great_planks"
+    },
+    "type=top": {
+      "model": "rthaumcraft:block/great_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "rthaumcraft:block/arcane_plate"
+	},
+	"render_type": "translucent"
+}

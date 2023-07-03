@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=east": {
+            "model": "rthaumcraft:block/table_research",
+            "y": 90
+        },
+        "facing=north": {
+            "model": "rthaumcraft:block/table_research"
+        },
+        "facing=south": {
+            "model": "rthaumcraft:block/table_research",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "rthaumcraft:block/table_research",
+            "y": 270
+        }
+    }
+}

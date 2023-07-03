@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "rthaumcraft:block/great_sapling"
+  },
+  "render_type": "cutout"
+}

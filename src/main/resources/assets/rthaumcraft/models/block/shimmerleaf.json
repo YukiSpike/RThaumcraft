@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "rthaumcraft:block/shimmerleaf"
+    },
+    "render_type": "cutout"
+}

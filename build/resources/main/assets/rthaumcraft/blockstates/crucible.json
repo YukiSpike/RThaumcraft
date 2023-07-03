@@ -1,0 +1,19 @@
+{
+    "variants": {
+      "facing=east": {
+        "model": "rthaumcraft:block/crucible",
+        "y": 90
+      },
+      "facing=north": {
+        "model": "rthaumcraft:block/crucible"
+      },
+      "facing=south": {
+        "model": "rthaumcraft:block/crucible",
+        "y": 180
+      },
+      "facing=west": {
+        "model": "rthaumcraft:block/crucible",
+        "y": 270
+      }
+    }
+}

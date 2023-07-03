@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_trapdoor_top",
+  "textures": {
+    "texture": "rthaumcraft:block/silver_trapdoor"
+  },
+  "render_type": "translucent"
+}

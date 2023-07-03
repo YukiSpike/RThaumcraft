@@ -1,0 +1,10 @@
+{
+    "variants": {
+      "lit=true": {
+        "model": "rthaumcraft:block/alchemical_furnace"
+      },
+      "lit=false": {
+        "model": "rthaumcraft:block/alchemical_furnace_on"
+      }
+    }
+}
