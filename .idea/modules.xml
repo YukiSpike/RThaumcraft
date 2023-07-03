@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RThaumcraft-1.20.1-47.0.1.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RThaumcraft-1.20.1-47.0.1.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RThaumcraft-1.20.1-47.0.14.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RThaumcraft-1.20.1-47.0.14.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RThaumcraft-1.20.1-47.0.14.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RThaumcraft-1.20.1-47.0.14.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RThaumcraft.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RThaumcraft.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RThaumcraft.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RThaumcraft.test.iml" />
     </modules>
   </component>
 </project>
