@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "rthaumcraft:block/obsidian_totem",
-        "up": "rthaumcraft:block/obsidian_tile",
-        "down": "rthaumcraft:block/obsidian_tile"
-    }
-}

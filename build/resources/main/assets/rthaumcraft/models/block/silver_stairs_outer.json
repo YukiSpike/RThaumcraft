@@ -1,8 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "rthaumcraft:block/silver_planks",
-    "side": "rthaumcraft:block/silver_planks",
-    "top": "rthaumcraft:block/silver_planks"
-  }
-}

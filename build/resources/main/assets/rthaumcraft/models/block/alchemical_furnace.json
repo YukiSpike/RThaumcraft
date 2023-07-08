@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "down": "rthaumcraft:block/alchemical_furnace_side",
-        "up": "rthaumcraft:block/alchemical_furnace_top",
-        "all": "rthaumcraft:block/alchemical_furnace_front_off"
-    }
-}

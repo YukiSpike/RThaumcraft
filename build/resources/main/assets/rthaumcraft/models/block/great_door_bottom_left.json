@@ -1,8 +1,0 @@
-{
-  "parent": "block/door_bottom_left",
-  "textures": {
-    "bottom": "rthaumcraft:block/great_door_bottom",
-    "top": "rthaumcraft:block/great_door_top"
-  },
-  "render_type": "translucent"
-}

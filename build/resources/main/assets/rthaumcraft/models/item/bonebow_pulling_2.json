@@ -1,6 +1,0 @@
-{
-    "parent": "item/bow",
-    "textures": {
-        "layer0": "rthaumcraft:item/bonebow_pulling_2"
-    }
-}
