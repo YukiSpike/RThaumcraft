@@ -15,11 +15,11 @@ public class ModFoods {
     public static final DeferredRegister<Item> FOODS = DeferredRegister.create(ForgeRegistries.ITEMS, RThaumcraft.MODID);
 //nutrition饥饿度，saturationMod饱腹度
     public static final RegistryObject<Item> ZOMBIE_BRAIN = FOODS.register("zombie_brain", 
-    () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(2F).
+    () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3F).
             alwaysEat().effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600), 1.0F).build())));
 
     public static final RegistryObject<Item> TRIPLE_MEAT_TREAT = FOODS.register("triple_meat_treat", 
-    () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(4F).
+    () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(1F).
             alwaysEat().effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100), 2.0F).build())));
 
 

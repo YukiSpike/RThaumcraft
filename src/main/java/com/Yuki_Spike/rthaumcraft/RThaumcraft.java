@@ -18,8 +18,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 @Mod(RThaumcraft.MODID)
 public class RThaumcraft {
@@ -36,6 +36,7 @@ public class RThaumcraft {
         ModFoods.register(modEventBus);
         ModEnchantments.register(modEventBus);
         ModCreativeTab.register(modEventBus);
+        GeckoLib.initialize();
         MinecraftForge.EVENT_BUS.register(this);
     }
 

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "rthaumcraft:block/arcane_stone",
+    "side": "rthaumcraft:block/arcane_stone",
+    "top": "rthaumcraft:block/arcane_stone"
+  }
+}

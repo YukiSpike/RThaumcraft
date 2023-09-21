@@ -17,22 +17,58 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum ModArmorMaterial implements ArmorMaterial{
 
-    THAUMIUMARMOR("thaumiumarmor", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+    THAUMIUM_ARMOR("thaumium_armor", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
         p_266652_.put(ArmorItem.Type.BOOTS, 2);
         p_266652_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266652_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266652_.put(ArmorItem.Type.HELMET, 2);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.0F, () -> {
+    }), 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.THAUMIUM_INGOT.get());
     }),
 
-    VOIDARMOR("voidarmor", 25, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+    VOID_ARMOR("void_armor", 10, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
         p_266652_.put(ArmorItem.Type.BOOTS, 3);
         p_266652_.put(ArmorItem.Type.LEGGINGS, 6);
         p_266652_.put(ArmorItem.Type.CHESTPLATE, 8);
         p_266652_.put(ArmorItem.Type.HELMET, 3);
-    }), 1, SoundEvents.ARMOR_EQUIP_IRON, 3.0F, 0.1F, () -> {
+    }), 15, SoundEvents.ARMOR_EQUIP_IRON, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.VOID_INGOT.get());
+    }),
+
+    THAUMIUMFORTRESS_ARMOR("thaumiumfortress_armor", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+        p_266652_.put(ArmorItem.Type.BOOTS, 3);
+        p_266652_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266652_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266652_.put(ArmorItem.Type.HELMET, 3);
+    }), 20, SoundEvents.ARMOR_EQUIP_IRON, 3.0F, 0.2F, () -> {
+        return Ingredient.of(ModItems.THAUMIUM_INGOT.get());
+    }),
+
+    CULTISTLEADER_ARMOR("cultistleader_armor", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+        p_266652_.put(ArmorItem.Type.BOOTS, 3);
+        p_266652_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266652_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266652_.put(ArmorItem.Type.HELMET, 3);
+    }), 15, SoundEvents.ARMOR_EQUIP_IRON, 3.0F, 0.2F, () -> {
+        return Ingredient.of(ModItems.PRIMORDIAL_PEARL.get());
+    }),
+
+    CULTISTROBE_ARMOR("cultistrobe_armor", 12, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+        p_266652_.put(ArmorItem.Type.BOOTS, 1);
+        p_266652_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266652_.put(ArmorItem.Type.CHESTPLATE, 3);
+        p_266652_.put(ArmorItem.Type.HELMET, 1);
+    }), 10, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> {
+        return Ingredient.of(ModItems.PRIMORDIAL_PEARL.get());
+    }),
+
+    CULTISTPLATE_ARMOR("cultistplate_armor", 12, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266652_) -> {
+        p_266652_.put(ArmorItem.Type.BOOTS, 2);
+        p_266652_.put(ArmorItem.Type.LEGGINGS, 5);
+        p_266652_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266652_.put(ArmorItem.Type.HELMET, 2);
+    }), 10, SoundEvents.ARMOR_EQUIP_IRON, 1.5F, 0.0F, () -> {
+        return Ingredient.of(ModItems.PRIMORDIAL_PEARL.get());
     });
 
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {

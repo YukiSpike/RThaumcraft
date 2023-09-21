@@ -99,7 +99,21 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> ARCANE_STONE = BLOCKS.register("arcane_stone",
-            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.STONE).strength(1.5F, 6.0F)));
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_STONE_STAIRS = BLOCKS.register("arcane_stone_stairs",
+            () -> new StairBlock(() -> ModBlocks.ARCANE_STONE.get().defaultBlockState(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_STONE_SLAB = BLOCKS.register("arcane_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_STONE_WALL = BLOCKS.register("arcane_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_BLOCK = BLOCKS.register("arcane_block",
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_BLOCK_STAIRS = BLOCKS.register("arcane_block_stairs",
+            () -> new StairBlock(() -> ModBlocks.ARCANE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_BLOCK_SLAB = BLOCKS.register("arcane_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ARCANE_BLOCK_WALL = BLOCKS.register("arcane_block_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> THAUMIUM_BLOCK = BLOCKS.register("thaumium_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> VOID_BLOCK = BLOCKS.register("void_block",

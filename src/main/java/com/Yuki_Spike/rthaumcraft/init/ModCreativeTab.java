@@ -17,13 +17,14 @@ public class ModCreativeTab {
 
 
     public static final RegistryObject<CreativeModeTab> RTHAUMCRAFT_ITEM_TAB = CREATIVE_MODE_TABS.register("rthaumcraft_item_tab", () -> CreativeModeTab.builder()
-    .withTabsBefore(CreativeModeTabs.COMBAT)
+    .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
     .icon(() -> ModItems.THAUMONOMICON.get().getDefaultInstance())
     .title(Component.translatable("itemGroup." + RThaumcraft.MODID + ".item_tab"))
     .displayItems((parameters, output) -> {
         output.acceptAll(Stream.of(
                 ModItems.THAUMONOMICON,
                 ModItems.THAUMONOMICON_CHEAT,
+                ModItems.CRIMSON_RITES,
                 ModItems.SCRIBING_TOOLS,
                 ModItems.CINNABAR_CLUSTER,
                 ModItems.QUICKSILVER,
@@ -62,6 +63,20 @@ public class ModCreativeTab {
                 ModItems.VOID_CHESTPLATE,
                 ModItems.VOID_LEGGINGS,
                 ModItems.VOID_BOOTS,
+                ModItems.THAUMIUMFORTRESS_HELMET,
+                ModItems.THAUMIUMFORTRESS_CHESTPLATE,
+                ModItems.THAUMIUMFORTRESS_LEGGINGS,
+                ModItems.CULTISTLEADER_HELMET,
+                ModItems.CULTISTLEADER_CHESTPLATE,
+                ModItems.CULTISTLEADER_LEGGINGS,
+                ModItems.CULTISTROBE_HELMET,
+                ModItems.CULTISTROBE_CHESTPLATE,
+                ModItems.CULTISTROBE_LEGGINGS,
+                ModItems.CULTISTROBE_BOOTS,
+                ModItems.CULTISTPLATE_HELMET,
+                ModItems.CULTISTPLATE_CHESTPLATE,
+                ModItems.CULTISTPLATE_LEGGINGS,
+                ModItems.CULTISTPLATE_BOOTS,
 
                 ModItems.BONEBOW,
                 ModItems.CRIMSON_BLADE,
@@ -75,6 +90,11 @@ public class ModCreativeTab {
                 ModItems.VOID_SHOVEL,
                 ModItems.VOID_HOE,
                 ModItems.VOID_AXE,
+                ModItems.ZEPHYR_SWORD,
+                ModItems.CORE_PICKAXE,
+                ModItems.EARTHMOVER_SHOVEL,
+                ModItems.GROWTH_HOE,
+                ModItems.STREAM_AXE,
 
                 ModItems.GOLEMANCERS_BELL,
                 ModItems.GOLEM_CORE_BLANK,
@@ -88,7 +108,6 @@ public class ModCreativeTab {
                 ModItems.GOLEM_CORE_HARVEST,
                 ModItems.GOLEM_CORE_LIQUID,
                 ModItems.GOLEM_CORE_LUMBER,
-                ModItems.GOLEM_CORE_PATROL,
                 ModItems.GOLEM_CORE_SORTING,
                 ModItems.GOLEM_CORE_USE,
                 ModItems.GOLEM_UPGRADE_AER,
@@ -146,7 +165,15 @@ public class ModCreativeTab {
                         ModItems.SILVER_PRESSURE_PLATE,
                         ModItems.SILVER_SIGN,
                         ModItems.SILVER_HANGING_SIGN,
+
                         ModItems.ARCANE_STONE,
+                        ModItems.ARCANE_STONE_STAIRS,
+                        ModItems.ARCANE_STONE_SLAB,
+                        ModItems.ARCANE_STONE_WALL,
+                        ModItems.ARCANE_BLOCK,
+                        ModItems.ARCANE_BLOCK_STAIRS,
+                        ModItems.ARCANE_BLOCK_SLAB,
+                        ModItems.ARCANE_BLOCK_WALL,
                         ModItems.THAUMIUM_BLOCK,
                         ModItems.VOID_BLOCK,
                         ModItems.FLESH_BLOCK,

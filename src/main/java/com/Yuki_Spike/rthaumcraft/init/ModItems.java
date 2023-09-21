@@ -3,6 +3,12 @@ package com.Yuki_Spike.rthaumcraft.init;
 import com.Yuki_Spike.rthaumcraft.RThaumcraft;
 
 import com.Yuki_Spike.rthaumcraft.items.*;
+import com.Yuki_Spike.rthaumcraft.items.armor.Cultistleader_Armor;
+import com.Yuki_Spike.rthaumcraft.items.armor.Cultistplate_Armor;
+import com.Yuki_Spike.rthaumcraft.items.armor.Cultistrobe_Armor;
+import com.Yuki_Spike.rthaumcraft.items.armor.Thaumiumfortress_Armor;
+import com.Yuki_Spike.rthaumcraft.items.tool.*;
+import com.Yuki_Spike.rthaumcraft.items.weapon.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -85,6 +91,20 @@ public class ModItems {
 
     public static final RegistryObject<Item> ARCANE_STONE = ITEMS.register("arcane_stone",
             () -> new BlockItem(ModBlocks.ARCANE_STONE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_STONE_STAIRS = ITEMS.register("arcane_stone_stairs",
+            () -> new BlockItem(ModBlocks.ARCANE_STONE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_STONE_SLAB = ITEMS.register("arcane_stone_slab",
+            () -> new BlockItem(ModBlocks.ARCANE_STONE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_STONE_WALL = ITEMS.register("arcane_stone_wall",
+            () -> new BlockItem(ModBlocks.ARCANE_STONE_WALL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_BLOCK = ITEMS.register("arcane_block",
+            () -> new BlockItem(ModBlocks.ARCANE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_BLOCK_STAIRS = ITEMS.register("arcane_block_stairs",
+            () -> new BlockItem(ModBlocks.ARCANE_BLOCK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_BLOCK_SLAB = ITEMS.register("arcane_block_slab",
+            () -> new BlockItem(ModBlocks.ARCANE_BLOCK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARCANE_BLOCK_WALL = ITEMS.register("arcane_block_wall",
+            () -> new BlockItem(ModBlocks.ARCANE_BLOCK_WALL.get(), new Item.Properties()));
     public static final RegistryObject<Item> THAUMIUM_BLOCK = ITEMS.register("thaumium_block",
             () -> new BlockItem(ModBlocks.THAUMIUM_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> VOID_BLOCK = ITEMS.register("void_block",
@@ -127,6 +147,8 @@ public class ModItems {
     public static final RegistryObject<Item> THAUMONOMICON = ITEMS.register("thaumonomicon",
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> THAUMONOMICON_CHEAT = ITEMS.register("thaumonomicon_cheat",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CRIMSON_RITES = ITEMS.register("crimson_rites",
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SCRIBING_TOOLS = ITEMS.register("scribing_tools",
             () -> new Item(new Item.Properties().stacksTo(1)));
@@ -212,8 +234,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> GOLEM_CORE_LUMBER = ITEMS.register("golem_core_lumber",
             () -> new Item(new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> GOLEM_CORE_PATROL = ITEMS.register("golem_core_patrol",
-            () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> GOLEM_CORE_SORTING = ITEMS.register("golem_core_sorting",
             () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> GOLEM_CORE_USE = ITEMS.register("golem_core_use",
@@ -256,24 +276,68 @@ public class ModItems {
             () -> {return new voidhoe();});
     public static RegistryObject<Item> VOID_AXE = ITEMS.register("void_axe",
             () -> {return new voidaxe();});
+    public static RegistryObject<Item> ZEPHYR_SWORD = ITEMS.register("zephyr_sword",
+            () -> {return new zephyrsword();});
+    public static RegistryObject<Item> CORE_PICKAXE = ITEMS.register("core_pickaxe",
+            () -> {return new corepickaxe();});
+    public static RegistryObject<Item> EARTHMOVER_SHOVEL = ITEMS.register("earthmover_shovel",
+            () -> {return new earthmovershovel();});
+    public static RegistryObject<Item> GROWTH_HOE = ITEMS.register("growth_hoe",
+            () -> {return new growthhoe();});
+    public static RegistryObject<Item> STREAM_AXE = ITEMS.register("stream_axe",
+            () -> {return new streamaxe();});
 
-    //装备护甲
+    //神秘护甲
     public static final RegistryObject<Item> THAUMIUM_HELMET = ITEMS.register("thaumium_helmet",
-            () -> new ArmorItem(ModArmorMaterial.THAUMIUMARMOR, ArmorItem.Type.HELMET,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.THAUMIUM_ARMOR, ArmorItem.Type.HELMET,(new Item.Properties())));
     public static final RegistryObject<Item> THAUMIUM_CHESTPLATE = ITEMS.register("thaumium_chestplate",
-            () -> new ArmorItem(ModArmorMaterial.THAUMIUMARMOR, ArmorItem.Type.CHESTPLATE,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.THAUMIUM_ARMOR, ArmorItem.Type.CHESTPLATE,(new Item.Properties())));
     public static final RegistryObject<Item> THAUMIUM_LEGGINGS = ITEMS.register("thaumium_leggings",
-            () -> new ArmorItem(ModArmorMaterial.THAUMIUMARMOR, ArmorItem.Type.LEGGINGS,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.THAUMIUM_ARMOR, ArmorItem.Type.LEGGINGS,(new Item.Properties())));
     public static final RegistryObject<Item> THAUMIUM_BOOTS = ITEMS.register("thaumium_boots",
-            () -> new ArmorItem(ModArmorMaterial.THAUMIUMARMOR, ArmorItem.Type.BOOTS,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.THAUMIUM_ARMOR, ArmorItem.Type.BOOTS,(new Item.Properties())));
+    //虚空护甲
     public static final RegistryObject<Item> VOID_HELMET = ITEMS.register("void_helmet",
-            () -> new ArmorItem(ModArmorMaterial.VOIDARMOR, ArmorItem.Type.HELMET,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.VOID_ARMOR, ArmorItem.Type.HELMET,(new Item.Properties())));
     public static final RegistryObject<Item> VOID_CHESTPLATE = ITEMS.register("void_chestplate",
-            () -> new ArmorItem(ModArmorMaterial.VOIDARMOR, ArmorItem.Type.CHESTPLATE,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.VOID_ARMOR, ArmorItem.Type.CHESTPLATE,(new Item.Properties())));
     public static final RegistryObject<Item> VOID_LEGGINGS = ITEMS.register("void_leggings",
-            () -> new ArmorItem(ModArmorMaterial.VOIDARMOR, ArmorItem.Type.LEGGINGS,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.VOID_ARMOR, ArmorItem.Type.LEGGINGS,(new Item.Properties())));
     public static final RegistryObject<Item> VOID_BOOTS = ITEMS.register("void_boots",
-            () -> new ArmorItem(ModArmorMaterial.VOIDARMOR, ArmorItem.Type.BOOTS,(new Item.Properties())));
+            () -> new ArmorItem(ModArmorMaterial.VOID_ARMOR, ArmorItem.Type.BOOTS,(new Item.Properties())));
+    //神秘要塞
+    public static final RegistryObject<Thaumiumfortress_Armor> THAUMIUMFORTRESS_HELMET = ITEMS.register("thaumiumfortress_helmet",
+            () -> new Thaumiumfortress_Armor(ModArmorMaterial.THAUMIUMFORTRESS_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Thaumiumfortress_Armor> THAUMIUMFORTRESS_CHESTPLATE = ITEMS.register("thaumiumfortress_chestplate",
+            () -> new Thaumiumfortress_Armor(ModArmorMaterial.THAUMIUMFORTRESS_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Thaumiumfortress_Armor> THAUMIUMFORTRESS_LEGGINGS = ITEMS.register("thaumiumfortress_leggings",
+            () -> new Thaumiumfortress_Armor(ModArmorMaterial.THAUMIUMFORTRESS_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    //血腥主教
+    public static final RegistryObject<Cultistleader_Armor> CULTISTLEADER_HELMET = ITEMS.register("cultistleader_helmet",
+            () -> new Cultistleader_Armor(ModArmorMaterial.CULTISTLEADER_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Cultistleader_Armor> CULTISTLEADER_CHESTPLATE = ITEMS.register("cultistleader_chestplate",
+            () -> new Cultistleader_Armor(ModArmorMaterial.CULTISTLEADER_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Cultistleader_Armor> CULTISTLEADER_LEGGINGS = ITEMS.register("cultistleader_leggings",
+            () -> new Cultistleader_Armor(ModArmorMaterial.CULTISTLEADER_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    //血腥邪徒
+    public static final RegistryObject<Cultistrobe_Armor> CULTISTROBE_HELMET = ITEMS.register("cultistrobe_helmet",
+            () -> new Cultistrobe_Armor(ModArmorMaterial.CULTISTROBE_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Cultistrobe_Armor> CULTISTROBE_CHESTPLATE = ITEMS.register("cultistrobe_chestplate",
+            () -> new Cultistrobe_Armor(ModArmorMaterial.CULTISTROBE_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Cultistrobe_Armor> CULTISTROBE_LEGGINGS = ITEMS.register("cultistrobe_leggings",
+            () -> new Cultistrobe_Armor(ModArmorMaterial.CULTISTROBE_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Cultistrobe_Armor> CULTISTROBE_BOOTS = ITEMS.register("cultistrobe_boots",
+            () -> new Cultistrobe_Armor(ModArmorMaterial.CULTISTROBE_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
+    //血腥骑士
+    public static final RegistryObject<Cultistplate_Armor> CULTISTPLATE_HELMET = ITEMS.register("cultistplate_helmet",
+            () -> new Cultistplate_Armor(ModArmorMaterial.CULTISTPLATE_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Cultistplate_Armor> CULTISTPLATE_CHESTPLATE = ITEMS.register("cultistplate_chestplate",
+            () -> new Cultistplate_Armor(ModArmorMaterial.CULTISTPLATE_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Cultistplate_Armor> CULTISTPLATE_LEGGINGS = ITEMS.register("cultistplate_leggings",
+            () -> new Cultistplate_Armor(ModArmorMaterial.CULTISTPLATE_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Cultistplate_Armor> CULTISTPLATE_BOOTS = ITEMS.register("cultistplate_boots",
+            () -> new Cultistplate_Armor(ModArmorMaterial.CULTISTPLATE_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
