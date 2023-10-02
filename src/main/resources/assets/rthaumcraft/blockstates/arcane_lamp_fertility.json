@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "hanging=false,lit=true": {
+            "model": "rthaumcraft:block/arcane_lamp_fertility"
+        },
+        "hanging=true,lit=true": {
+            "model": "rthaumcraft:block/arcane_lamp_fertility_hanging"
+        },
+        "hanging=false,lit=false": {
+            "model": "rthaumcraft:block/arcane_lamp_fertility_off"
+        },
+        "hanging=true,lit=false": {
+            "model": "rthaumcraft:block/arcane_lamp_fertility_hanging_off"
+        }
+    }
+}

@@ -7,6 +7,8 @@ import com.Yuki_Spike.rthaumcraft.items.armor.Cultistleader_Armor;
 import com.Yuki_Spike.rthaumcraft.items.armor.Cultistplate_Armor;
 import com.Yuki_Spike.rthaumcraft.items.armor.Cultistrobe_Armor;
 import com.Yuki_Spike.rthaumcraft.items.armor.Thaumiumfortress_Armor;
+import com.Yuki_Spike.rthaumcraft.items.aspect.CompoundAspect;
+import com.Yuki_Spike.rthaumcraft.items.aspect.PrimalAspect;
 import com.Yuki_Spike.rthaumcraft.items.tool.*;
 import com.Yuki_Spike.rthaumcraft.items.weapon.*;
 import net.minecraft.world.item.*;
@@ -15,135 +17,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RThaumcraft.MODID);
 
-    //方块物品
-    public static final RegistryObject<Item> GREAT_SAPLING = ITEMS.register("great_sapling",
-            () -> new BlockItem(ModBlocks.GREAT_SAPLING.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_LEAVES = ITEMS.register("great_leaves",
-            () -> new BlockItem(ModBlocks.GREAT_LEAVES.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_LOG = ITEMS.register("great_log",
-            () -> new BlockItem(ModBlocks.GREAT_LOG.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_WOOD = ITEMS.register("great_wood",
-            () -> new BlockItem(ModBlocks.GREAT_WOOD.get(), new Item.Properties()));
-    public static final RegistryObject<Item> STRIPPED_GREAT_LOG = ITEMS.register("stripped_great_log",
-            () -> new BlockItem(ModBlocks.STRIPPED_GREAT_LOG.get(), new Item.Properties()));
-    public static final RegistryObject<Item> STRIPPED_GREAT_WOOD = ITEMS.register("stripped_great_wood",
-            () -> new BlockItem(ModBlocks.STRIPPED_GREAT_WOOD.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_PLANKS = ITEMS.register("great_planks",
-            () -> new BlockItem(ModBlocks.GREAT_PLANKS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_STAIRS = ITEMS.register("great_stairs",
-            () -> new BlockItem(ModBlocks.GREAT_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_SLAB = ITEMS.register("great_slab",
-            () -> new BlockItem(ModBlocks.GREAT_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_FENCE = ITEMS.register("great_fence",
-            () -> new BlockItem(ModBlocks.GREAT_FENCE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_FENCE_GATE = ITEMS.register("great_fence_gate",
-            () -> new BlockItem(ModBlocks.GREAT_FENCE_GATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_DOOR = ITEMS.register("great_door",
-            () -> new BlockItem(ModBlocks.GREAT_DOOR.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_TRAPDOOR = ITEMS.register("great_trapdoor",
-            () -> new BlockItem(ModBlocks.GREAT_TRAPDOOR.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_BUTTON = ITEMS.register("great_button",
-            () -> new BlockItem(ModBlocks.GREAT_BUTTON.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_PRESSURE_PLATE = ITEMS.register("great_pressure_plate",
-            () -> new BlockItem(ModBlocks.GREAT_PRESSURE_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> GREAT_SIGN = ITEMS.register("great_sign",
-            () -> new SignItem((new Item.Properties()).stacksTo(16), ModBlocks.GREAT_SIGN.get(), ModBlocks.GREAT_WALL_SIGN.get()));
-    public static final RegistryObject<Item> GREAT_HANGING_SIGN = ITEMS.register("great_hanging_sign",
-            () -> new HangingSignItem(ModBlocks.GREAT_HANGING_SIGN.get(), ModBlocks.GREAT_WALL_HANGING_SIGN.get(), (new Item.Properties()).stacksTo(16)));
-    public static final RegistryObject<Item> SILVER_SAPLING = ITEMS.register("silver_sapling",
-            () -> new BlockItem(ModBlocks.SILVER_SAPLING.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_LEAVES = ITEMS.register("silver_leaves",
-            () -> new BlockItem(ModBlocks.SILVER_LEAVES.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_LOG = ITEMS.register("silver_log",
-            () -> new BlockItem(ModBlocks.SILVER_LOG.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_WOOD = ITEMS.register("silver_wood",
-            () -> new BlockItem(ModBlocks.SILVER_WOOD.get(), new Item.Properties()));
-    public static final RegistryObject<Item> STRIPPED_SILVER_LOG = ITEMS.register("stripped_silver_log",
-            () -> new BlockItem(ModBlocks.STRIPPED_SILVER_LOG.get(), new Item.Properties()));
-    public static final RegistryObject<Item> STRIPPED_SILVER_WOOD = ITEMS.register("stripped_silver_wood",
-            () -> new BlockItem(ModBlocks.STRIPPED_SILVER_WOOD.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_PLANKS = ITEMS.register("silver_planks",
-            () -> new BlockItem(ModBlocks.SILVER_PLANKS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_STAIRS = ITEMS.register("silver_stairs",
-            () -> new BlockItem(ModBlocks.SILVER_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_SLAB = ITEMS.register("silver_slab",
-            () -> new BlockItem(ModBlocks.SILVER_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_FENCE = ITEMS.register("silver_fence",
-            () -> new BlockItem(ModBlocks.SILVER_FENCE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_FENCE_GATE = ITEMS.register("silver_fence_gate",
-            () -> new BlockItem(ModBlocks.SILVER_FENCE_GATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_DOOR = ITEMS.register("silver_door",
-            () -> new BlockItem(ModBlocks.SILVER_DOOR.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_TRAPDOOR = ITEMS.register("silver_trapdoor",
-            () -> new BlockItem(ModBlocks.SILVER_TRAPDOOR.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_BUTTON = ITEMS.register("silver_button",
-            () -> new BlockItem(ModBlocks.SILVER_BUTTON.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_PRESSURE_PLATE = ITEMS.register("silver_pressure_plate",
-            () -> new BlockItem(ModBlocks.SILVER_PRESSURE_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> SILVER_SIGN = ITEMS.register("silver_sign",
-            () -> new SignItem((new Item.Properties()).stacksTo(16), ModBlocks.SILVER_SIGN.get(), ModBlocks.SILVER_WALL_SIGN.get()));
-    public static final RegistryObject<Item> SILVER_HANGING_SIGN = ITEMS.register("silver_hanging_sign",
-            () -> new HangingSignItem(ModBlocks.SILVER_HANGING_SIGN.get(), ModBlocks.SILVER_WALL_HANGING_SIGN.get(), (new Item.Properties()).stacksTo(16)));
-
-
-    public static final RegistryObject<Item> ARCANE_STONE = ITEMS.register("arcane_stone",
-            () -> new BlockItem(ModBlocks.ARCANE_STONE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_STONE_STAIRS = ITEMS.register("arcane_stone_stairs",
-            () -> new BlockItem(ModBlocks.ARCANE_STONE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_STONE_SLAB = ITEMS.register("arcane_stone_slab",
-            () -> new BlockItem(ModBlocks.ARCANE_STONE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_STONE_WALL = ITEMS.register("arcane_stone_wall",
-            () -> new BlockItem(ModBlocks.ARCANE_STONE_WALL.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_BLOCK = ITEMS.register("arcane_block",
-            () -> new BlockItem(ModBlocks.ARCANE_BLOCK.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_BLOCK_STAIRS = ITEMS.register("arcane_block_stairs",
-            () -> new BlockItem(ModBlocks.ARCANE_BLOCK_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_BLOCK_SLAB = ITEMS.register("arcane_block_slab",
-            () -> new BlockItem(ModBlocks.ARCANE_BLOCK_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARCANE_BLOCK_WALL = ITEMS.register("arcane_block_wall",
-            () -> new BlockItem(ModBlocks.ARCANE_BLOCK_WALL.get(), new Item.Properties()));
-    public static final RegistryObject<Item> THAUMIUM_BLOCK = ITEMS.register("thaumium_block",
-            () -> new BlockItem(ModBlocks.THAUMIUM_BLOCK.get(), new Item.Properties()));
-    public static final RegistryObject<Item> VOID_BLOCK = ITEMS.register("void_block",
-            () -> new BlockItem(ModBlocks.VOID_BLOCK.get(), new Item.Properties()));
-    public static final RegistryObject<Item> FLESH_BLOCK = ITEMS.register("flesh_block",
-            () -> new BlockItem(ModBlocks.FLESH_BLOCK.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TALLOW_BLOCK = ITEMS.register("tallow_block",
-            () -> new BlockItem(ModBlocks.TALLOW_BLOCK.get(), new Item.Properties()));
-
-    public static final RegistryObject<Item> TABLE = ITEMS.register("table",
-            () -> new BlockItem(ModBlocks.TABLE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TABLE_CRAFT = ITEMS.register("table_craft",
-            () -> new BlockItem(ModBlocks.TABLE_CRAFT.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TABLE_RESEARCH = ITEMS.register("table_research",
-            () -> new BlockItem(ModBlocks.TABLE_RESEARCH.get(), new Item.Properties()));
-
-    public static final RegistryObject<Item> ORE_AMBER = ITEMS.register("ore_amber",
-            () -> new BlockItem(ModBlocks.ORE_AMBER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_DEEPSLATE_AMBER = ITEMS.register("ore_deepslate_amber",
-            () -> new BlockItem(ModBlocks.ORE_DEEPSLATE_AMBER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_CINNIBAR = ITEMS.register("ore_cinnibar",
-            () -> new BlockItem(ModBlocks.ORE_CINNIBAR.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_DEEPSLATE_CINNIBAR = ITEMS.register("ore_deepslate_cinnibar",
-            () -> new BlockItem(ModBlocks.ORE_DEEPSLATE_CINNIBAR.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_SHARD_AER = ITEMS.register("ore_shard_aer",
-            () -> new BlockItem(ModBlocks.ORE_SHARD_AER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_SHARD_FIRE = ITEMS.register("ore_shard_fire",
-            () -> new BlockItem(ModBlocks.ORE_SHARD_FIRE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_SHARD_WATER = ITEMS.register("ore_shard_water",
-            () -> new BlockItem(ModBlocks.ORE_SHARD_WATER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_SHARD_EARTH = ITEMS.register("ore_shard_earth",
-            () -> new BlockItem(ModBlocks.ORE_SHARD_EARTH.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_SHARD_ORDER = ITEMS.register("ore_shard_order",
-            () -> new BlockItem(ModBlocks.ORE_SHARD_ORDER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ORE_SHARD_ENTROPY = ITEMS.register("ore_shard_entropy",
-            () -> new BlockItem(ModBlocks.ORE_SHARD_ENTROPY.get(), new Item.Properties()));
-
-
-    //物品
     public static final RegistryObject<Item> THAUMONOMICON = ITEMS.register("thaumonomicon",
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> THAUMONOMICON_CHEAT = ITEMS.register("thaumonomicon_cheat",
@@ -209,6 +86,66 @@ public class ModItems {
     public static final RegistryObject<Item> TAINT_TENDRIL = ITEMS.register("taint_tendril",
             () -> new Item(new Item.Properties()));
 
+    //杖端
+    public static final RegistryObject<Item> CAP_IRON = ITEMS.register("cap_iron",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAP_COPPER = ITEMS.register("cap_copper",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAP_GOLD = ITEMS.register("cap_gold",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAP_THAUMIUM_INERT = ITEMS.register("cap_thaumium_inert",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAP_THAUMIUM = ITEMS.register("cap_thaumium",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAP_VOID_INERT = ITEMS.register("cap_void_inert",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CAP_VOID = ITEMS.register("cap_void",
+            () -> new Item(new Item.Properties()));
+
+    //杖柄
+    public static final RegistryObject<Item> ROD_GREATWOOD = ITEMS.register("rod_greatwood",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_SILVERWOOD = ITEMS.register("rod_silverwood",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_REED = ITEMS.register("rod_reed",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_BLAZE = ITEMS.register("rod_blaze",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_ICE = ITEMS.register("rod_ice",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_OBSIDIAN = ITEMS.register("rod_obsidian",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_QUARTZ = ITEMS.register("rod_quartz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_BONE = ITEMS.register("rod_bone",
+            () -> new Item(new Item.Properties()));
+
+    //杖芯
+    public static final RegistryObject<Item> ROD_STAFF_GREATWOOD = ITEMS.register("rod_staff_greatwood",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_SILVERWOOD = ITEMS.register("rod_staff_silverwood",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_REED = ITEMS.register("rod_staff_reed",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_BLAZE = ITEMS.register("rod_staff_blaze",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_ICE = ITEMS.register("rod_staff_ice",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_OBSIDIAN = ITEMS.register("rod_staff_obsidian",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_QUARTZ = ITEMS.register("rod_staff_quartz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_BONE = ITEMS.register("rod_staff_bone",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROD_STAFF_PRIMAL = ITEMS.register("rod_staff_primal",
+            () -> new Item(new Item.Properties()));
+
+    //法杖
+    public static final RegistryObject<Item> WAND_WOOD_IRON = ITEMS.register("wand_wood_iron",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WAND_WOOD_COPPER = ITEMS.register("wand_wood_copper",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
     //傀儡
     public static final RegistryObject<Item> GOLEMANCERS_BELL = ITEMS.register("golemancers_bell",
             () -> new Item(new Item.Properties().stacksTo(1)));
@@ -255,37 +192,37 @@ public class ModItems {
     public static RegistryObject<Item> BONEBOW = ITEMS.register("bonebow",
             () -> new bonebow((new Item.Properties()).durability(426)));
     public static RegistryObject<Item> CRIMSON_BLADE = ITEMS.register("crimson_blade",
-            () -> {return new crimsonblade();});
+            crimsonblade::new);
     public static RegistryObject<Item> THAUMIUM_SWORD = ITEMS.register("thaumium_sword",
-            () -> {return new thaumiumsword();});
+            thaumiumsword::new);
     public static RegistryObject<Item> THAUMIUM_PICKAXE = ITEMS.register("thaumium_pickaxe",
-            () -> {return new thaumiumpickaxe();});
+            thaumiumpickaxe::new);
     public static RegistryObject<Item> THAUMIUM_AXE = ITEMS.register("thaumium_axe",
-            () -> {return new thaumiumaxe();});
+            thaumiumaxe::new);
     public static RegistryObject<Item> THAUMIUM_SHOVEL = ITEMS.register("thaumium_shovel",
-            () -> {return new thaumiumshovel();});
+            thaumiumshovel::new);
     public static RegistryObject<Item> THAUMIUM_HOE = ITEMS.register("thaumium_hoe",
-            () -> {return new thaumiumhoe();});
+            thaumiumhoe::new);
     public static RegistryObject<Item> VOID_SWORD = ITEMS.register("void_sword",
-            () -> {return new voidsword();});
+            voidsword::new);
     public static RegistryObject<Item> VOID_PICKAXE = ITEMS.register("void_pickaxe",
-            () -> {return new voidpickaxe();});
+            voidpickaxe::new);
     public static RegistryObject<Item> VOID_SHOVEL = ITEMS.register("void_shovel",
-            () -> {return new voidshovel();});
+            voidshovel::new);
     public static RegistryObject<Item> VOID_HOE = ITEMS.register("void_hoe",
-            () -> {return new voidhoe();});
+            voidhoe::new);
     public static RegistryObject<Item> VOID_AXE = ITEMS.register("void_axe",
-            () -> {return new voidaxe();});
+            voidaxe::new);
     public static RegistryObject<Item> ZEPHYR_SWORD = ITEMS.register("zephyr_sword",
-            () -> {return new zephyrsword();});
+            zephyrsword::new);
     public static RegistryObject<Item> CORE_PICKAXE = ITEMS.register("core_pickaxe",
-            () -> {return new corepickaxe();});
+            corepickaxe::new);
     public static RegistryObject<Item> EARTHMOVER_SHOVEL = ITEMS.register("earthmover_shovel",
-            () -> {return new earthmovershovel();});
+            earthmovershovel::new);
     public static RegistryObject<Item> GROWTH_HOE = ITEMS.register("growth_hoe",
-            () -> {return new growthhoe();});
+            growthhoe::new);
     public static RegistryObject<Item> STREAM_AXE = ITEMS.register("stream_axe",
-            () -> {return new streamaxe();});
+            streamaxe::new);
 
     //神秘护甲
     public static final RegistryObject<Item> THAUMIUM_HELMET = ITEMS.register("thaumium_helmet",
@@ -337,6 +274,116 @@ public class ModItems {
             () -> new Cultistplate_Armor(ModArmorMaterial.CULTISTPLATE_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Cultistplate_Armor> CULTISTPLATE_BOOTS = ITEMS.register("cultistplate_boots",
             () -> new Cultistplate_Armor(ModArmorMaterial.CULTISTPLATE_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    //流体桶
+    public static final RegistryObject<Item> DEATHWATER_BUCKET = ITEMS.register("deathwater_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_DEATHWATER, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
+
+    //要素
+    //原始要素
+    public static final RegistryObject<Item> UNKNOWN = ITEMS.register("aspect_unknown",
+            () -> new PrimalAspect(new Item.Properties(),0x404040,0));
+    public static final RegistryObject<Item> AIR = ITEMS.register("aspect_aer",
+            () -> new PrimalAspect(new Item.Properties(),0xffff7e,1));
+    public static final RegistryObject<Item> FIRE = ITEMS.register("aspect_ignis",
+            () -> new PrimalAspect(new Item.Properties(), 0xff5a01, 1));
+    public static final RegistryObject<Item> WATER = ITEMS.register("aspect_aqua",
+            () -> new PrimalAspect(new Item.Properties(), 0x3cd4fc, 1));
+    public static final RegistryObject<Item> EARTH = ITEMS.register("aspect_terra",
+            () -> new PrimalAspect(new Item.Properties(), 0x56c000, 1));
+    public static final RegistryObject<Item> ORDER = ITEMS.register("aspect_ordo",
+            () -> new PrimalAspect(new Item.Properties(), 0xd5d4ec, 1));
+    public static final RegistryObject<Item> ENTROPY = ITEMS.register("aspect_perditio",
+            () -> new PrimalAspect(new Item.Properties(), 0x404040, 1));
+
+    //二级复合要素
+    public static final RegistryObject<Item> VOID = ITEMS.register("aspect_vacuos",
+            () -> new CompoundAspect(new Item.Properties(),0x888888, new RegistryObject[] {AIR, ENTROPY}));
+    public static final RegistryObject<Item> LIGHT = ITEMS.register("aspect_lux",
+            () -> new CompoundAspect(new Item.Properties(),0xfff663, new RegistryObject[] {AIR, FIRE}));
+    public static final RegistryObject<Item> WEATHER = ITEMS.register("aspect_tempestas",
+            () -> new CompoundAspect(new Item.Properties(),0xFFFFFF, new RegistryObject[] {AIR, WATER}));
+    public static final RegistryObject<Item> MOTION = ITEMS.register("aspect_motus",
+            () -> new CompoundAspect(new Item.Properties(),0xcdccf4, new RegistryObject[] {AIR, ORDER}));
+    public static final RegistryObject<Item> COLD = ITEMS.register("aspect_gelum",
+            () -> new CompoundAspect(new Item.Properties(),0xe1ffff, new RegistryObject[] {FIRE, ENTROPY}));
+    public static final RegistryObject<Item> CRYSTAL = ITEMS.register("aspect_vitreus",
+            () -> new CompoundAspect(new Item.Properties(),0x80ffff, new RegistryObject[] {EARTH, ORDER}));
+    public static final RegistryObject<Item> LIFE = ITEMS.register("aspect_victus",
+            () -> new CompoundAspect(new Item.Properties(),0xde0005, new RegistryObject[] {WATER, EARTH}));
+    public static final RegistryObject<Item> POISON = ITEMS.register("aspect_venenum",
+            () -> new CompoundAspect(new Item.Properties(),0x89f000,  new RegistryObject[] {WATER, ENTROPY}));
+    public static final RegistryObject<Item> ENERGY = ITEMS.register("aspect_potentia",
+            () -> new CompoundAspect(new Item.Properties(),0xc0ffff, new RegistryObject[] {ORDER, FIRE}));
+    public static final RegistryObject<Item> EXCHANGE = ITEMS.register("aspect_permutatio",
+            () -> new CompoundAspect(new Item.Properties(),0x578357, new RegistryObject[] {ENTROPY, ORDER}));
+    
+    //三级复合要素
+    public static final RegistryObject<Item> METAL = ITEMS.register("aspect_metallum",
+            () -> new CompoundAspect(new Item.Properties(),0xb5b5cd, new RegistryObject[] {EARTH, CRYSTAL}));
+    public static final RegistryObject<Item> DEATH = ITEMS.register("aspect_mortuus",
+            () -> new CompoundAspect(new Item.Properties(),0x887788, new RegistryObject[] {LIFE, ENTROPY}));
+    public static final RegistryObject<Item> FLIGHT = ITEMS.register("aspect_volatus",
+            () -> new CompoundAspect(new Item.Properties(),0xe7e7d7, new RegistryObject[] {AIR, MOTION}));
+    public static final RegistryObject<Item> DARKNESS = ITEMS.register("aspect_tenebrae",
+            () -> new CompoundAspect(new Item.Properties(),0x222222, new RegistryObject[] {VOID, LIGHT}));
+    public static final RegistryObject<Item> SOUL = ITEMS.register("aspect_spiritus",
+            () -> new CompoundAspect(new Item.Properties(),0xebebfb, new RegistryObject[] {LIFE, DEATH}));
+    public static final RegistryObject<Item> HEAL = ITEMS.register("aspect_sano",
+            () -> new CompoundAspect(new Item.Properties(),0xff2f34, new RegistryObject[] {LIFE, ORDER}));
+    public static final RegistryObject<Item> TRAVEL = ITEMS.register("aspect_iter",
+            () -> new CompoundAspect(new Item.Properties(),0xe0585b, new RegistryObject[] {MOTION, EARTH}));
+    public static final RegistryObject<Item> ELDRITCH = ITEMS.register("aspect_alienis",
+            () -> new CompoundAspect(new Item.Properties(),0x805080, new RegistryObject[] {VOID, DARKNESS}));
+    public static final RegistryObject<Item> MAGIC = ITEMS.register("aspect_praecantatio",
+            () -> new CompoundAspect(new Item.Properties(),0x9700c0, new RegistryObject[] {VOID, ENERGY}));
+    public static final RegistryObject<Item> AURA = ITEMS.register("aspect_auram",
+            () -> new CompoundAspect(new Item.Properties(),0xffc0ff, new RegistryObject[] {MAGIC, AIR}));
+    public static final RegistryObject<Item> TAINT = ITEMS.register("aspect_vitium",
+            () -> new CompoundAspect(new Item.Properties(),0x800080, new RegistryObject[] {MAGIC, ENTROPY}));
+    public static final RegistryObject<Item> SLIME = ITEMS.register("aspect_limus",
+            () -> new CompoundAspect(new Item.Properties(),0x01f800, new RegistryObject[] {LIFE, WATER}));
+    public static final RegistryObject<Item> PLANT = ITEMS.register("aspect_herba",
+            () -> new CompoundAspect(new Item.Properties(),0x01ac00, new RegistryObject[] {LIFE, EARTH}));
+    public static final RegistryObject<Item> TREE = ITEMS.register("aspect_arbor",
+            () -> new CompoundAspect(new Item.Properties(),0x876531, new RegistryObject[] {AIR, PLANT}));
+    public static final RegistryObject<Item> BEAST = ITEMS.register("aspect_bestia",
+            () -> new CompoundAspect(new Item.Properties(),0x9f6409, new RegistryObject[] {MOTION, LIFE}));
+    public static final RegistryObject<Item> FLESH = ITEMS.register("aspect_corpus",
+            () -> new CompoundAspect(new Item.Properties(),0xee478d, new RegistryObject[] {DEATH, BEAST}));
+    public static final RegistryObject<Item> UNDEAD = ITEMS.register("aspect_exanimis",
+            () -> new CompoundAspect(new Item.Properties(),0x3a4000, new RegistryObject[] {MOTION, DEATH}));
+    public static final RegistryObject<Item> MIND = ITEMS.register("aspect_cognitio",
+            () -> new CompoundAspect(new Item.Properties(),0xffc2b3, new RegistryObject[] {FIRE, SOUL}));
+    public static final RegistryObject<Item> SENSES = ITEMS.register("aspect_sensus",
+            () -> new CompoundAspect(new Item.Properties(),0x0fd9ff, new RegistryObject[] {AIR, SOUL}));
+    public static final RegistryObject<Item> HUMAN = ITEMS.register("aspect_humanus",
+            () -> new CompoundAspect(new Item.Properties(),0xffd7c0, new RegistryObject[] {BEAST, MIND}));
+    public static final RegistryObject<Item> CROP = ITEMS.register("aspect_messis",
+            () -> new CompoundAspect(new Item.Properties(),0xe1b371, new RegistryObject[] {PLANT, HUMAN}));
+    public static final RegistryObject<Item> MINE = ITEMS.register("aspect_perfodio",
+            () -> new CompoundAspect(new Item.Properties(),0xdcd2d8, new RegistryObject[] {HUMAN, EARTH}));
+    public static final RegistryObject<Item> TOOL = ITEMS.register("aspect_instrumentum",
+            () -> new CompoundAspect(new Item.Properties(),0x4040ee, new RegistryObject[] {HUMAN, ORDER}));
+    public static final RegistryObject<Item> HARVEST = ITEMS.register("aspect_meto",
+            () -> new CompoundAspect(new Item.Properties(),0xeead82, new RegistryObject[] {CROP, TOOL}));
+    public static final RegistryObject<Item> WEAPON = ITEMS.register("aspect_telum",
+            () -> new CompoundAspect(new Item.Properties(),0xc05050, new RegistryObject[] {TOOL, FIRE}));
+    public static final RegistryObject<Item> ARMOR = ITEMS.register("aspect_tutamen",
+            () -> new CompoundAspect(new Item.Properties(),0x00c0c0, new RegistryObject[] {TOOL, EARTH}));
+    public static final RegistryObject<Item> HUNGER = ITEMS.register("aspect_fames",
+            () -> new CompoundAspect(new Item.Properties(),0x9a0305, new RegistryObject[] {LIFE, VOID}));
+    public static final RegistryObject<Item> GREED = ITEMS.register("aspect_lucrum",
+            () -> new CompoundAspect(new Item.Properties(),0xe6be44, new RegistryObject[] {HUMAN, HUNGER}));
+    public static final RegistryObject<Item> CRAFT = ITEMS.register("aspect_fabrico",
+            () -> new CompoundAspect(new Item.Properties(),0x809d80, new RegistryObject[] {HUMAN, TOOL}));
+    public static final RegistryObject<Item> CLOTH = ITEMS.register("aspect_pannus",
+            () -> new CompoundAspect(new Item.Properties(),0xeaeac2, new RegistryObject[] {TOOL, BEAST}));
+    public static final RegistryObject<Item> MECHANISM = ITEMS.register("aspect_machina",
+            () -> new CompoundAspect(new Item.Properties(),0x8080a0, new RegistryObject[] {MOTION, TOOL}));
+    public static final RegistryObject<Item> TRAP = ITEMS.register("aspect_vinculum",
+            () -> new CompoundAspect(new Item.Properties(),0x9a8080, new RegistryObject[] {MOTION, ENTROPY}));
+
 
 
     public static void register(IEventBus eventBus) {

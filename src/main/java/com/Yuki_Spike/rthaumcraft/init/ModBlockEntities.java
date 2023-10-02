@@ -24,6 +24,9 @@ public class ModBlockEntities {
                 () -> List.of(ModBlocks.GREAT_HANGING_SIGN.get(), ModBlocks.SILVER_HANGING_SIGN.get(),
                         ModBlocks.GREAT_WALL_HANGING_SIGN.get(), ModBlocks.SILVER_WALL_HANGING_SIGN.get()));
 
+//    public static final RegistryObject<BlockEntityType<ModAlchemicalFurnace_Entity>> ALCHEMICAL_FURNACE_ENTITY = BLOCK_ENTITIES.register("alchemical_furnace_entity",
+//            () -> BlockEntityType.Builder.of(ModAlchemicalFurnace_Entity::new, ModBlocks.ALCHEMICAL_FURNACE.get()).build(null));
+
     public static RegistryObject<BlockEntityType<?>> registerBlockEntityType(String name, BlockEntityType.BlockEntitySupplier<?> factoryIn, Supplier<List<Block>> validBlocks)
     {
         return BLOCK_ENTITIES.register(name, () -> BlockEntityType.Builder.of(factoryIn, validBlocks.get().toArray(new Block[0])).build(null));

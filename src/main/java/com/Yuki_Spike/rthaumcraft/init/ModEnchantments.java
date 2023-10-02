@@ -12,8 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModEnchantments {
-    public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS,
-    RThaumcraft.MODID);
+    public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, RThaumcraft.MODID);
 
     public static RegistryObject<Enchantment> REPAIR = ENCHANTMENTS.register("repair",
         () -> new Enchantment_Repair(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEARABLE, EquipmentSlot.MAINHAND));

@@ -2,7 +2,7 @@
     "parent": "block/cube_all",
     "textures": {
         "down": "rthaumcraft:block/alchemical_furnace_side",
-        "up": "rthaumcraft:block/alchemical_furnace_top",
+        "up": "rthaumcraft:block/alchemical_furnace_top_on",
         "all": "rthaumcraft:block/alchemical_furnace_front_on"
     }
 }

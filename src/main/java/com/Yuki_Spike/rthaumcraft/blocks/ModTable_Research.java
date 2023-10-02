@@ -33,7 +33,7 @@ public class ModTable_Research extends Block {
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_55200_, BlockGetter p_55201_, BlockPos p_55202_, CollisionContext p_55203_) {
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext context) {
         return SHAPE;
     }
 

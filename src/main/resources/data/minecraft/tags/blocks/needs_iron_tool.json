@@ -1,5 +1,8 @@
 {
   "values": [
-
+    "rthaumcraft:ore_amber",
+    "rthaumcraft:ore_deepslate_amber",
+    "rthaumcraft:ore_cinnibar",
+    "rthaumcraft:ore_deepslate_cinnibar"
   ]
 }

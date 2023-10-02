@@ -1,6 +1,16 @@
 {
-    "variants":{
-        "lit=true":{"model": "rthaumcraft:block/arcane_lamp"},
-        "lit=false":{"model": "rthaumcraft:block/arcane_lamp_off"}
+    "variants": {
+        "hanging=false,lit=true": {
+            "model": "rthaumcraft:block/arcane_lamp"
+        },
+        "hanging=true,lit=true": {
+            "model": "rthaumcraft:block/arcane_lamp_hanging"
+        },
+        "hanging=false,lit=false": {
+            "model": "rthaumcraft:block/arcane_lamp_off"
+        },
+        "hanging=true,lit=false": {
+            "model": "rthaumcraft:block/arcane_lamp_hanging_off"
+        }
     }
 }

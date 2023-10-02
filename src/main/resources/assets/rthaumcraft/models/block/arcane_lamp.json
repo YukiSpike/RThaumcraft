@@ -1,21 +1,19 @@
 {
-	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "rthaumcraft:block/arcane_lamp",
-		"1": "rthaumcraft:block/arcane_lamp_top",
-		"particle": "rthaumcraft:block/arcane_lamp"
+		"1": "rthaumcraft:block/arcane_lamp_on",
+		"particle": "rthaumcraft:block/arcane_lamp_on"
 	},
 	"elements": [
 		{
 			"from": [4, 0, 4],
 			"to": [12, 12, 12],
 			"faces": {
-				"north": {"uv": [4, 2, 12, 14], "texture": "#0"},
-				"east": {"uv": [4, 2, 12, 14], "texture": "#0"},
-				"south": {"uv": [4, 2, 12, 14], "texture": "#0"},
-				"west": {"uv": [4, 2, 12, 14], "texture": "#0"},
-				"up": {"uv": [4, 4, 12, 12], "texture": "#1"},
-				"down": {"uv": [4, 4, 12, 12], "texture": "#1"}
+				"north": {"uv": [0, 0, 8, 12], "texture": "#1"},
+				"east": {"uv": [0, 0, 8, 12], "texture": "#1"},
+				"south": {"uv": [0, 0, 8, 12], "texture": "#1"},
+				"west": {"uv": [0, 0, 8, 12], "texture": "#1"},
+				"up": {"uv": [8, 0, 16, 8], "texture": "#1"},
+				"down": {"uv": [8, 0, 16, 8], "texture": "#1"}
 			}
 		}
 	],

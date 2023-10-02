@@ -1,7 +1,11 @@
 package com.Yuki_Spike.rthaumcraft;
 
+import com.Yuki_Spike.rthaumcraft.fluid.Death_Water;
 import com.Yuki_Spike.rthaumcraft.init.*;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -36,6 +40,10 @@ public class RThaumcraft {
         ModFoods.register(modEventBus);
         ModEnchantments.register(modEventBus);
         ModCreativeTab.register(modEventBus);
+        ModVillagers.register(modEventBus);
+        ModFluids.register(modEventBus);
+        Death_Water.register(modEventBus);
+        //ModMenus.register(modEventBus);
         GeckoLib.initialize();
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -58,6 +66,10 @@ public class RThaumcraft {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            //ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_DEATHWATER.get(), RenderType.translucent());
+            //ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_DEATHWATER.get(),RenderType.translucent());
+
+            //MenuScreens.register(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), GemInfusingStationScreen::new);
         }
 
         @SubscribeEvent
